@@ -20,7 +20,7 @@ export function loginRequest(email, password) {
     dispatch(login());
 
     //API REQUEST
-    return axios.post(API_URL + '/account/signin', { email, password })
+    return axios.post(API_URL + '/users/signin', { email, password })
     .then((response) => {
       //SUCCESS
       dispatch(loginSuccess(email));
@@ -57,7 +57,7 @@ export function registerRequest(email, password) {
       // Inform Register API is starting
       dispatch(register());
 
-      return axios.post(API_URL + '/account/signup', { email, password })
+      return axios.post(API_URL + '/users/signup', { email, password })
       .then((response) => {
           dispatch(registerSuccess());
       }).catch((error) => {
