@@ -26,7 +26,7 @@ class Header extends React.Component {
     return <Link to={route} className="brand-logo left">Friendrop</Link>;
   }
   render() {
-    const loginedMenu = [
+    const loggedInMenu = [
         <li className="nav-item" key={1}>
           <Link className="nav-link" to="/profile">프로필</Link>
         </li>,
@@ -43,7 +43,7 @@ class Header extends React.Component {
           <Link className="nav-link" to="/logout">로그아웃</Link>
         </li>
     ];
-    const notLoginedMenu = [
+    const notLoggedInMenu = [
         <li className="nav-item" key={1}>
           <Link className="nav-link" to="/">로그인</Link>
         </li>,
@@ -55,7 +55,7 @@ class Header extends React.Component {
     return(
       <nav className="nav-wrapper blue darken-1">
         {this.renderBrand()}
-          { this.props.authenticated ? loginedMenu : notLoginedMenu }
+          { this.props.authenticated ? loggedInMenu : notLoggedInMenu }
         <ul className="right">
         </ul>
       </nav>
