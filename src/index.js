@@ -20,7 +20,7 @@ ReactDOM.render(
       <Route path="/" component={App}>
         <IndexRoute component={Home}/>
         <Route path="login" component={Login}/>
-        <Route path="register" component={Register}/>
+        <Route path="signup" component={Register}/>
       </Route>
     </Router>
   </Provider>, rootElement);
