@@ -45,7 +45,7 @@ class Header extends React.Component {
     ];
     const notLoggedInMenu = [
         <li className="nav-item" key={1}>
-          <Link className="nav-link" to="/">로그인</Link>
+          <Link className="nav-link" to="/login">로그인</Link>
         </li>,
         <li className="nav-item" key={2}>
           <Link className="nav-link" to="/signup">가입하기</Link>
