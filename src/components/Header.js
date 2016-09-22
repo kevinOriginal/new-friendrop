@@ -23,7 +23,7 @@ class Header extends React.Component {
     else
     { route = '/'; }
 
-    return <Link to={route} className="navbar-brand">Friendrop</Link>;
+    return <Link to={route} className="brand-logo left">Friendrop</Link>;
   }
   render() {
     const loginedMenu = [
@@ -53,10 +53,10 @@ class Header extends React.Component {
       ];
 
     return(
-      <nav className="navbar navbar-light">
+      <nav className="nav-wrapper blue darken-1">
         {this.renderBrand()}
-        <ul className="nav navbar-nav">
           { this.props.authenticated ? loginedMenu : notLoginedMenu }
+        <ul className="right">
         </ul>
       </nav>
     );
