@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-import { App, Login, Register, Signup } from './containers';
+import { App, Login, Register, Signup, Home } from './containers';
 import './index.css';
 
 // Redux
