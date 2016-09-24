@@ -55,8 +55,8 @@ class Header extends React.Component {
     return(
       <nav className="nav-wrapper blue darken-1">
         {this.renderBrand()}
-          { this.props.authenticated ? loggedInMenu : notLoggedInMenu }
         <ul className="right">
+        { this.props.authenticated ? loggedInMenu : notLoggedInMenu }
         </ul>
       </nav>
     );
