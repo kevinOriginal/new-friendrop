@@ -23,10 +23,10 @@ class Header extends React.Component {
     else
     { route = '/'; }
 
-    return <Link to={route} className="navbar-brand">Friendrop</Link>;
+    return <Link to={route} className="brand-logo left">Friendrop</Link>;
   }
   render() {
-    const loginedMenu = [
+    const loggedInMenu = [
         <li className="nav-item" key={1}>
           <Link className="nav-link" to="/profile">프로필</Link>
         </li>,
@@ -43,9 +43,9 @@ class Header extends React.Component {
           <Link className="nav-link" to="/logout">로그아웃</Link>
         </li>
     ];
-    const notLoginedMenu = [
+    const notLoggedInMenu = [
         <li className="nav-item" key={1}>
-          <Link className="nav-link" to="/">로그인</Link>
+          <Link className="nav-link" to="/login">로그인</Link>
         </li>,
         <li className="nav-item" key={2}>
           <Link className="nav-link" to="/signup">가입하기</Link>
@@ -53,10 +53,10 @@ class Header extends React.Component {
       ];
 
     return(
-      <nav className="navbar navbar-light">
+      <nav className="nav-wrapper blue darken-1">
         {this.renderBrand()}
-        <ul className="nav navbar-nav">
-          { this.props.authenticated ? loginedMenu : notLoginedMenu }
+        <ul className="right">
+        { this.props.authenticated ? loggedInMenu : notLoggedInMenu }
         </ul>
       </nav>
     );
