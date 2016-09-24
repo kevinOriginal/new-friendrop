@@ -116,7 +116,7 @@ class Authentication extends React.Component {
         <div className="footer">
           <div className="card-content">
             <div className="right">
-              New Here? <Link to="/register">Create an account</Link>
+              New Here? <Link to="/signup">Create an account</Link>
             </div>
           </div>
         </div>
