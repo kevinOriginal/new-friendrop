@@ -6,7 +6,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  authenticated : false
+  isLoggedIn : false
 };
 
 class Header extends React.Component {
@@ -56,7 +56,7 @@ class Header extends React.Component {
       <nav className="nav-wrapper blue darken-1">
         {this.renderBrand()}
         <ul className="right">
-        { this.props.authenticated ? loggedInMenu : notLoggedInMenu }
+          { this.props.isLoggedIn ? loggedInMenu : notLoggedInMenu }
         </ul>
       </nav>
     );
