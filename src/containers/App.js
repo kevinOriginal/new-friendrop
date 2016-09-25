@@ -14,9 +14,10 @@ class App extends Component {
   }
 }
 
-const defaultProps = {
+App.defaultProps = {
   isLoggedIn : false
 };
+
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.authentication.status.isLoggedIn
