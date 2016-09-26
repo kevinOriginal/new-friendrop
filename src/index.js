@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-import { App, Login, Register, Signup, Home } from './containers';
+import { App, Login, Register, Signup, Home, DropList } from './containers';
 import './index.css';
 
 // Redux
@@ -21,6 +21,7 @@ ReactDOM.render(
         <IndexRoute component={Home}/>
         <Route path="login" component={Login}/>
         <Route path="signup" component={Signup}/>
+        <Route path="todaydrop" component={DropList}/>
       </Route>
     </Router>
   </Provider>, rootElement);
