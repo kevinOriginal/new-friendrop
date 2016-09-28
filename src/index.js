@@ -7,6 +7,7 @@ import {
   LetterList, ContactList,
   Profile
  } from './containers';
+import RequireAuth from './containers/require_auth';
 import './index.css';
 
 // Redux
@@ -26,10 +27,10 @@ ReactDOM.render(
         <IndexRoute component={Home}/>
         <Route path="login" component={Login}/>
         <Route path="signup" component={Signup}/>
-        <Route path="todaydrop" component={DropList}/>
-        <Route path="letter" component={LetterList}/>
-        <Route path="contact" component={ContactList}/>
-        <Route path="profile" component={Profile}/>
+        <Route path="todaydrop" component={RequireAuth(DropList)}/>
+        <Route path="letter" component={RequireAuth(LetterList)}/>
+        <Route path="contact" component={RequireAuth(ContactList)}/>
+        <Route path="profile" component={RequireAuth(Profile)}/>
       </Route>
     </Router>
   </Provider>, rootElement);
