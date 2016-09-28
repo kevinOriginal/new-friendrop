@@ -24,6 +24,7 @@ export function loginRequest(email, password) {
     .then((response) => {
       //SUCCESS
       dispatch(loginSuccess(email));
+      localStorage.setItem('token', response.data.token);
     })
     .catch((error) => {
       //FAILED
