@@ -36,7 +36,7 @@ class ProfileCard extends Component {
         <div>
         <h3>Profile</h3>
         <hr/>
-          {this.renderProfile()};
+          {this.renderProfile()}
         </div>
     );
   }
