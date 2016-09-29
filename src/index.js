@@ -7,6 +7,7 @@ import {
   LetterList, ContactList,
   Profile
  } from './containers';
+import { AUTH_LOGIN_SUCCESS } from './actions/ActionTypes';
 import RequireAuth from './containers/require_auth';
 import './index.css';
 
@@ -17,6 +18,12 @@ import reducers from './reducers';
 import thunk from 'redux-thunk';
 
 const store = createStore(reducers, applyMiddleware(thunk));
+
+// If we have token, consider the user to be logged in.
+const token = localStorage.getItem('token');
+if(token) {
+  store.dispatch({type: AUTH_LOGIN_SUCCESS});
+}
 
 const rootElement = document.getElementById('root');
 
