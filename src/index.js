@@ -5,7 +5,7 @@ import {
   App, Login, Register,
   Signup, Home, DropList,
   LetterList, ContactList,
-  Profile
+  Profile, List
  } from './containers';
 import { AUTH_LOGIN_SUCCESS } from './actions/ActionTypes';
 import RequireAuth from './containers/require_auth';
@@ -34,9 +34,9 @@ ReactDOM.render(
         <IndexRoute component={Home}/>
         <Route path="login" component={Login}/>
         <Route path="signup" component={Signup}/>
-        <Route path="todaydrop" component={RequireAuth(DropList)}/>
-        <Route path="letter" component={RequireAuth(LetterList)}/>
-        <Route path="contact" component={RequireAuth(ContactList)}/>
+        <Route path="todaydrop" component={RequireAuth(List)}/>
+        <Route path="letter" component={RequireAuth(List)}/>
+        <Route path="contact" component={RequireAuth(List)}/>
         <Route path="profile" component={RequireAuth(Profile)}/>
       </Route>
     </Router>
