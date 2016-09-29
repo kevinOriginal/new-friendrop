@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 import {
-  PROFILE_GET_STATUS,
-  PROFILE_GET_STATUS_SUCCESS,
-  PROFILE_GET_STATUS_FAILURE
+  PROFILE_GET,
+  PROFILE_GET_SUCCESS,
+  PROFILE_GET_FAILURE
 } from './ActionTypes';
 
 import { API_URL } from '../url';
@@ -29,19 +29,19 @@ export function getProfileRequest() {
 
 export function getProfile() {
   return {
-    type: PROFILE_GET_STATUS
+    type: PROFILE_GET
   };
 }
 
 export function getProfileSuccess (data) {
   return {
-    type: PROFILE_GET_STATUS_SUCCESS,
+    type: PROFILE_GET_SUCCESS,
     data
   };
 }
 
 export function getProfileFailure () {
   return {
-    type: PROFILE_GET_STATUS_FAILURE
+    type: PROFILE_GET_FAILURE
   };
 }

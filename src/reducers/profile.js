@@ -20,13 +20,13 @@ export default function profile(state, action) {
 
   switch(action.type){
     /*Profile*/
-    case types.PROFILE_GET_STATUS:
+    case types.PROFILE_GET:
       return update(state, {
         get: {
           status: { $set: 'WAITING'}
         }
       });
-    case types.PROFILE_GET_STATUS_SUCCESS:
+    case types.PROFILE_GET_SUCCESS:
       console.log("PROFILE GET SUCCESS ",action.data);
       return update(state, {
         get: {
@@ -34,7 +34,7 @@ export default function profile(state, action) {
         },
         data: { $set: action.data.profile }
       });
-    case types.PROFILE_GET_STATUS_FAILURE:
+    case types.PROFILE_GET_FAILURE:
       return update(state, {
         get: {
           status: { $set: 'FAILURE'}
