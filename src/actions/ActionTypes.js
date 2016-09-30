@@ -20,7 +20,6 @@ export const PROFILE_GET_SUCCESS = "PROFILE_GET_SUCCESS";
 export const PROFILE_GET_FAILURE = "PROFILE_GET_FAILURE";
 
 /* LIST ITEM (drop, letter, contact...) */
-export const LIST_SET_PAGE = "LIST_SET_PAGE";
 export const LIST_ITEM_GET = "LIST_ITEM_GET";
 export const LIST_ITEM_GET_SUCCESS = "LIST_ITEM_GET_SUCCESS";
 export const LIST_ITEM_GET_FAILURE = "LIST_ITEM_GET_FAILURE";

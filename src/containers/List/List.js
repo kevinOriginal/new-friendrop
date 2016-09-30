@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { LIST_SET_PAGE } from '../../actions/ActionTypes';
 
 const propTypes = {
 
@@ -17,10 +16,7 @@ class List extends Component {
     this.getPage = this.getPage.bind(this);
   }
 
-  componentWillMount() {
-    this.props.setPage(this.props.location.pathname);
-    console.log(this.props.location.pathname);
-  }
+
   getPage () {
     const dropPage = (
       <h3 className="brand-logo">Today Drop</h3>
@@ -58,14 +54,10 @@ class List extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    page: state.list.page
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    setPage: (page) => {
-      dispatch({type:LIST_SET_PAGE, page});
-    }
   };
 };
 

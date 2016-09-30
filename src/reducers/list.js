@@ -2,7 +2,6 @@ import * as types from '../actions/ActionTypes';
 import update from 'react-addons-update';
 
 const initialState = {
-  page: 'drop',
   status: 'WAITING',
 
   drop: {
@@ -21,10 +20,6 @@ export default function list(state, action) {
   }
 
   switch(action.type) {
-    case types.LIST_SET_PAGE:
-      return update(state, {
-        page: { $set : action.page }
-      });
     case types.LIST_ITEM_GET:
       return update(state, {
         list: {
