@@ -31,7 +31,7 @@ class List extends Component {
       <h3>Error...</h3>
     );
 
-    switch (this.props.page) {
+    switch (this.props.location.pathname) {
       case '/drop':
         return dropPage;
       case '/letter':
