@@ -34,7 +34,7 @@ ReactDOM.render(
         <IndexRoute component={Home}/>
         <Route path="login" component={Login}/>
         <Route path="signup" component={Signup}/>
-        <Route path="todaydrop" component={RequireAuth(List)}/>
+        <Route path="drop" component={RequireAuth(List)}/>
         <Route path="letter" component={RequireAuth(List)}/>
         <Route path="contact" component={RequireAuth(List)}/>
         <Route path="profile" component={RequireAuth(Profile)}/>

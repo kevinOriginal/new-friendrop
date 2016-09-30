@@ -19,7 +19,7 @@ class Header extends React.Component {
     let route;
 
     if(this.props.authenticated)
-    { route = '/todaydrop'; }
+    { route = '/drop'; }
     else
     { route = '/'; }
 
@@ -31,7 +31,7 @@ class Header extends React.Component {
           <Link className="nav-link" to="/profile">프로필</Link>
         </li>,
         <li className="nav-item" key={2}>
-          <Link className="nav-link" to="/todaydrop">오늘의 드랍</Link>
+          <Link className="nav-link" to="/drop">오늘의 드랍</Link>
         </li>,
         <li className="nav-item" key={3}>
           <Link className="nav-link" to="/letter">쪽지</Link>

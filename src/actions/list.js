@@ -10,6 +10,7 @@ import { API_URL } from '../url';
 
 /*
 Parameter:
+- page : 어떤 페이지인지. '/drop', '/letter', '/contact'
 - isInitial : 최초 로딩인지 아닌지
 - listType  : 이전 메모 로딩인지, 새로운 메모 로딩인지
 - id        : 메모의 id (다른 메모 로딩시 어디부터 로딩할지 결정)

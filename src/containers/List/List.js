@@ -36,7 +36,7 @@ class List extends Component {
     );
 
     switch (this.props.page) {
-      case '/todaydrop':
+      case '/drop':
         return dropPage;
       case '/letter':
         return letterPage;
