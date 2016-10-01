@@ -1,4 +1,5 @@
 import App from './App';
+<<<<<<< HEAD
 import Login from './Authentication/Login';
 import Home from './Home/Home';
 import Signup from './Authentication/Signup';
