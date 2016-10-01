@@ -1,10 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-<<<<<<< HEAD:src/containers/DropList/DropList.js
 import Drop from '../../components';
-=======
-import Drop from '../components/Drop';
->>>>>>> upstream/master:src/containers/DropList.js
 
 const propTypes = {
 
